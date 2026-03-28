@@ -61,10 +61,10 @@ This is a [Claude Code](https://docs.anthropic.com/en/docs/claude-code) skill. I
 
 ```bash
 # Clone and install
-git clone https://github.com/AXEform/sop-to-dag.git ~/.claude/skills/sop-to-dag
+git clone https://github.com/deashidle-stack/sop-to-dag.git ~/.claude/skills/sop-to-dag
 ```
 
-Or download the `.skill` file from [Releases](https://github.com/AXEform/sop-to-dag/releases).
+Or download the `.skill` file from [Releases](https://github.com/deashidle-stack/sop-to-dag/releases).
 
 ## Usage
 
