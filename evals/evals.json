@@ -1,0 +1,23 @@
+{
+  "skill_name": "sop-to-dag",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I need to structure our client intake process. Here's how it works:\n\nWhen a new inquiry comes in via the website contact form, I first check our CRM (HubSpot) to see if they're an existing client. If they are, I pull up their history and any previous proposals. If they're new, I create a record.\n\nNext I do a quick qualification — is their budget over 50K NOK, and is the project in our wheelhouse (UX/AX design, AI adoption, workflow automation)? If they pass both criteria, I move to proposal.\n\nFor the proposal, I pull our standard template from Google Docs, customize it based on the client's needs, and add pricing. Important rule: discount MUST NOT exceed 15% of quoted price, ever. I always review the proposal myself before sending — never let the automation send it directly.\n\nIf they don't qualify, I send a polite decline with 2-3 referrals to other agencies that might be a better fit. I track the decline reason in HubSpot for our quarterly pipeline analysis.",
+      "expected_output": "A Mermaid diagram showing the branching intake flow, a JSON DAG with ~8-12 subtasks following the SOPStruct schema, and validation scores. Should capture the 15% discount constraint, the human review gate, and the qualification branching logic.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Convert this incident response runbook to a DAG:\n\nPhase 1 — Detection & Triage:\nWhen an alert fires from Datadog (P1-P4), the on-call engineer acknowledges within 5 minutes. They check the dashboard for scope: is it one service or multiple? For P1/P2 (customer-facing outage), immediately open an incident channel in Slack and page the team lead. For P3/P4, log it in Jira and handle during business hours.\n\nPhase 2 — Investigation:\nThe on-call pulls recent deployments from GitHub (last 24h), checks error rates in Grafana, and reviews the service's health checks. If a recent deploy correlates with the spike, attempt a rollback. If not, escalate to the service owner.\n\nPhase 3 — Resolution & Postmortem:\nOnce the incident is resolved, update the Slack channel with a summary. Within 48 hours, the team lead writes a postmortem covering: timeline, root cause, impact (users affected, duration), and action items. Action items get tracked in Jira with owners and due dates. The postmortem is reviewed in the next team standup.",
+      "expected_output": "A multi-segment DAG with cross-segment dependencies (Phase 1 triage outcome determines Phase 2 path). Should have Decision nodes for severity routing (P1/P2 vs P3/P4) and deploy correlation. Should capture time constraints (5min ack, 48h postmortem). 15-20 subtasks expected.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Structure this simple onboarding checklist into a workflow graph:\n\n1. HR sends welcome email with first-day instructions\n2. IT provisions laptop and email account\n3. Manager schedules 1:1 intro meeting\n4. New hire completes compliance training (online, self-paced)\n5. Team lead assigns first buddy project",
+      "expected_output": "A simple DAG with 5 nodes. Steps 1-3 can happen in parallel (no dependencies between them). Step 4 depends on step 2 (needs laptop/email). Step 5 depends on step 3 (needs to have met the manager). Should note the parallel execution opportunity. Validation should pass 100%.",
+      "files": []
+    }
+  ]
+}

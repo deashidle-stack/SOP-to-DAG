@@ -1,3 +1,9 @@
+---
+title: research-summary
+type: note
+permalink: personal/skills/sop-to-dag/references/research-summary
+---
+
 # Research Foundation
 
 ## SOPStruct (Garg et al., JP Morgan AI Research, March 2025)

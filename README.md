@@ -1,3 +1,9 @@
+---
+title: README
+type: note
+permalink: personal/skills/sop-to-dag/readme
+---
+
 # SOP-to-DAG
 
 Convert natural language Standard Operating Procedures into validated, machine-readable DAG (Directed Acyclic Graph) workflows.

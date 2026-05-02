@@ -1,7 +1,19 @@
 ---
 name: sop-to-dag
-description: |
-  Convert natural language Standard Operating Procedures (SOPs) into validated DAG (Directed Acyclic Graph) representations. Use this skill whenever the user wants to: structure an SOP, convert a procedure to a graph, analyze a workflow's dependencies, create a Mermaid diagram from process documentation, parse operational procedures into machine-readable format, validate a workflow's structural integrity, or turn messy process docs into clean executable workflows. Also trigger when the user pastes procedural text and asks to "structure it", "graph it", "map the dependencies", "visualize the workflow", "make this executable", or "convert this to a DAG". Works with any domain: business processes, technical runbooks, onboarding flows, compliance procedures, client intake workflows, manufacturing SOPs, or any step-by-step process documentation.
+description: 'Convert natural language Standard Operating Procedures (SOPs) into validated
+  DAG (Directed Acyclic Graph) representations. Use this skill whenever the user wants
+  to: structure an SOP, convert a procedure to a graph, analyze a workflow''s dependencies,
+  create a Mermaid diagram from process documentation, parse operational procedures
+  into machine-readable format, validate a workflow''s structural integrity, or turn
+  messy process docs into clean executable workflows. Also trigger when the user pastes
+  procedural text and asks to "structure it", "graph it", "map the dependencies",
+  "visualize the workflow", "make this executable", or "convert this to a DAG". Works
+  with any domain: business processes, technical runbooks, onboarding flows, compliance
+  procedures, client intake workflows, manufacturing SOPs, or any step-by-step process
+  documentation.
+
+  '
+permalink: personal/skills/sop-to-dag/skill
 ---
 
 # SOP-to-DAG: Structured Process Conversion
